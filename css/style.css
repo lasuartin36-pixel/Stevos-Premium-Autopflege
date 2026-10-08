@@ -219,6 +219,29 @@ address { font-style: normal; }
 .card h3 { margin: 0 0 10px; font-family: var(--font-head); font-size: 1.25rem; letter-spacing: .06em; color: var(--gold-1); }
 .card p { margin: 0; color: var(--muted); font-size: .95rem; }
 
+
+/* Preispakete */
+.packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; align-items: stretch; }
+.pkg { position: relative; display: flex; flex-direction: column; padding: 0 0 26px; background: linear-gradient(170deg, #1a1612, #0c0b0a); border: 1px solid var(--line); border-radius: 4px; text-align: center; transition: transform .35s, box-shadow .35s, border-color .35s; }
+.pkg:hover { transform: translateY(-8px); border-color: var(--gold-2); box-shadow: 0 20px 50px rgba(0,0,0,.65), 0 0 30px rgba(233,191,74,.15); }
+.pkg--feat { border-color: var(--gold-2); box-shadow: 0 0 0 1px rgba(233,191,74,.25), 0 14px 40px rgba(233,191,74,.12); }
+.pkg__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); padding: 4px 14px; font-size: .66rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: #1a1204; background: var(--gold); border-radius: 2px; }
+.pkg__name { margin: 0; padding: 16px 12px; font-family: var(--font-head); font-size: 1.2rem; letter-spacing: .06em; color: #1a1204; background: var(--gold); border-radius: 3px 3px 0 0; }
+.pkg__list { list-style: none; margin: 0; padding: 22px 22px 8px; flex: 1; text-align: left; }
+.pkg__list li { position: relative; padding: 5px 0 5px 26px; font-size: .92rem; line-height: 1.4; }
+.pkg__list li::before { content: "✓"; position: absolute; left: 0; top: 5px; font-weight: 700; color: var(--gold-2); }
+.pkg__list small { display: block; color: var(--muted); font-size: .76rem; }
+.pkg__price { margin: 14px 0 6px; font-family: var(--font-head); font-weight: 900; font-size: 2.5rem; line-height: 1; background: var(--gold); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.pkg__price small { font-family: var(--font-body); font-weight: 500; font-size: .9rem; letter-spacing: .1em; margin-right: 4px; }
+.pkg__note { margin: 0; min-height: 3.6em; padding: 12px 18px 0; border-top: 1px solid var(--line); font-size: .82rem; font-weight: 600; color: var(--muted); }
+.extras { margin-top: 40px; padding: 26px 30px; border: 1px solid var(--gold-2); background: #0a0a0a; border-radius: 4px; }
+.extras h3 { margin: 0 0 12px; font-family: var(--font-head); font-size: 1.3rem; color: var(--gold-1); }
+.extras ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 6px 30px; }
+.extras li { position: relative; padding-left: 26px; }
+.extras li::before { content: "✓"; position: absolute; left: 0; font-weight: 700; color: var(--gold-2); }
+.extras strong { color: var(--gold-1); }
+.extras__hint { margin: 14px 0 0; font-size: .82rem; color: var(--muted); }
+
 /* Vorher / Nachher */
 .ba { position: relative; aspect-ratio: 16 / 9; max-height: 560px; width: 100%; overflow: hidden; border: 1px solid var(--gold-2); border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,.6); user-select: none; touch-action: pan-y; }
 .ba__layer { position: absolute; inset: 0; background-size: cover; background-position: center; }
